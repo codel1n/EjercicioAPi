@@ -8,8 +8,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false, // Esto permite conexiones sin necesidad de verificar el certificado
-    },
+      rejectUnauthorized: false
+    }
   },
   pool: {
     max: 5,
@@ -20,4 +20,3 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 });
 
 module.exports = sequelize;
-
